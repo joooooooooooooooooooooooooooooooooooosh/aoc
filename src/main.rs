@@ -19,9 +19,8 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         };
     } else {
-        // find latest input file
         problem_num = find_latest_problem()?;
-        print!("No problem specified, defaulting to ");
+        println!("No problem specified, defaulting to {}", problem_num);
     }
 
     run_problem(problem_num);
