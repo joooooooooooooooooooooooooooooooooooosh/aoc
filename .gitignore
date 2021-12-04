@@ -1,2 +1,4 @@
 /target
 Session.vim
+.gdb_history
+.vscode
