@@ -7,6 +7,7 @@ pub mod day03;
 pub mod day04;
 pub mod day05;
 pub mod day06;
+pub mod day07;
 
 // stolen from spanishpear who stole it from nickyvanurk
 // because i'm bad at rust imports
@@ -30,6 +31,7 @@ pub fn run_problem(day: u8) {
         4 => run_day!(day04, get_input(day)),
         5 => run_day!(day05, get_input(day)),
         6 => run_day!(day06, get_input(day)),
+        7 => run_day!(day07, get_input(day)),
         _ => println!("This problem isn't implemented")
     };
 }
