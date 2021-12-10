@@ -25,8 +25,28 @@ pub fn part1(input: String) -> Option<usize> {
     Some(fish.len())
 }
 
-pub fn part2(input: String) -> Option<u64> {
-    let result = 0;
-    Some(result)
+pub fn part2(input: String) -> Option<usize> {
+    let mut days: Vec<usize> = vec![0; 10];
+    input.split(',')
+        .filter_map(|x|
+            x.parse::<usize>().ok())
+        .for_each(|x|
+            days[x] += 1);
+
+    for _ in 0..256 {
+        // create new fish
+        days[9] = days[0];
+        // reset timers
+        days[7] += days[0];
+
+        for day in 1..=9 {
+            days[day - 1] = days[day];
+        }
+
+        days[9] = 0;
+    }
+
+    let total = days.into_iter().sum();
+    Some(total)
 }
 
