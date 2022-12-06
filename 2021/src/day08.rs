@@ -15,7 +15,20 @@ pub fn part1(input: String) -> Option<usize> {
     Some(count)
 }
 
-pub fn part2(input: String) -> Option<u64> {
-    let result = 0;
-    Some(result)
+pub fn part2(input: String) -> Option<usize> {
+    let input = input.lines()
+                .map(|line|
+                    line.split('|'));
+
+    let mut mapping = vec!{'z'; 8};
+    for mut line in input {
+        let mut i = line.next()?.split(' ')
+                   .filter(|x| x.len() > 0);
+        println!("{:?}", i.next());
+
+        let mut o = line.next()?.split(' ')
+                   .filter(|x| x.len() > 0);
+    }
+
+    Some(0)
 }

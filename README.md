@@ -7,3 +7,5 @@ These can be run with `cargo run xx` or just `cargo run` to run the latest probl
 Inside the `cursed-sh/` directory are my 1 line shell solutions to part 1 of each day in the corresponding `xx.sh` file.
 
 These are designed to be run from the root project directory as `cursed-sh/xx.sh`.
+
+* i promise the scripts i write in real life are at least a little bit more maintainable than these *
